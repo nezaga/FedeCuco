@@ -1,0 +1,1105 @@
+* {
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Anybody', cursive;
+    /* background-color: lightgray; */
+}
+
+header{
+    height: fit-content;
+}
+
+.dark_background{
+    background-color: rgb(37, 37, 37)
+}
+
+.dark_background .logo{
+    color: #fff;
+}
+
+.menu_home{
+    display: grid;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo span {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.header_img {
+    background-image: url(../assets/img/cocktail.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home_img{
+    background-image: url(../assets/img/fede_cuco1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#home_copy {
+    text-transform: uppercase;
+}
+
+.menu a{
+    text-transform: uppercase;
+    position: fixed;
+    color: #fff;
+    opacity: 50%;
+    z-index: 100;
+}
+
+.menu a:hover{
+    opacity: 100%;
+}
+
+.dark_menu a{
+    text-transform: uppercase;
+    position: fixed;
+    color: #000;
+    opacity: 50%;
+    z-index: 100;
+}
+
+.dark_menu a:hover{
+    opacity: 100%;
+}
+
+.options{
+    opacity: 100%;
+    list-style: none;
+    text-align: left;
+}
+
+.options a{
+    color: rgb(114, 114, 114);
+    font-weight: 400;
+}
+
+.options a:hover{
+    color: #fff;
+}
+
+section{
+    height: 100vh;
+}
+
+#about{
+    height: max-content;
+}
+
+.about_titulo{
+    text-transform: uppercase;
+    font-style: italic;
+    color: #fff;
+    position: absolute;
+    z-index: 10;
+}
+
+.about_img{
+    background-image: url(../assets/img/fede_cuco.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+#about_bio{
+    position: absolute;
+}
+
+p{
+    color: lightgray;
+}
+
+.grid_column1 {
+    grid-column: 1/2;
+}
+
+.grid_column2 {
+    grid-column: 2/3;
+}
+
+
+.redes{
+    height: 100vh;
+    background-color: #000;
+    position: relative;
+}
+
+.redes h2{
+    position: absolute;
+    color: #fff;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.redes div{
+    position: absolute;
+}
+
+.redes a{
+    color: gray;
+    text-transform: uppercase;
+    display: block;
+}
+
+.redes a:hover{
+    text-decoration: line-through;
+}
+
+#verne_titulo{
+    text-transform: uppercase;
+}
+
+.verne_img{
+    background-image: url(../assets/img/verne_club.jpg);
+    /* position: absolute; */
+    background-size: cover;
+    background-position: center;
+}
+
+.verne_sect{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.verne_sect p{
+    color: #000;
+}
+
+.verne_sect a {
+    text-decoration: none;
+    color: #000;
+}
+
+.verne_sect a:hover {
+    color: gray;
+}
+
+#verne_address {
+    text-align: center;
+}
+
+#verne_address p {
+    color: #000;
+}
+
+iframe {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.cocteles_titulo{
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    z-index: 10;
+}
+
+.content_centered{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.content_centered div{
+    vertical-align: middle;
+}
+
+.content_centered div i{
+    display: inline-block;
+    margin: 0;
+}
+
+.content_centered div i:hover{
+    color: #000;
+}
+
+.content_centered h2{
+    text-transform: uppercase;
+}
+
+.content_centered h3{
+    text-transform: uppercase;
+}
+
+.img_gallery{
+    display: inline-block;
+    background-image: url(../assets/img/opium_fashioned.jpg);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#img_gallery_count {
+    display: block;
+    text-align: left;
+    position: absolute;
+}
+
+#cocteles_copy {
+    display: block;
+    text-transform: uppercase;
+    text-align: left;
+    position: absolute;
+}
+
+#ingredients {
+    display: block;
+    list-style: none;
+    text-align: left;
+    position: absolute;
+}
+
+footer {
+    background-color: rgb(37, 37, 37);
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: gray;
+}
+
+footer a:hover{
+    color: #fff;
+}
+
+footer a:hover i{
+    color: #fff;
+}
+
+i{
+    color: gray;
+}
+
+#libro_img {
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-image: url(../assets/img/bartender-de-entrecasa.jpg);
+}
+
+#curso_img {
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/img/cocteleria_en_casa.jpg);
+}
+
+@media only screen and (max-width:767px){
+    .home{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .home header{
+        grid-column: 1/2;
+    }
+    
+    .logo{
+        font-size: 2rem;
+        margin: 5rem 0 0 5vw;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #000;
+        width: 95px;
+        height: 25%;
+    }
+    
+    .header_img {
+        height: 50vh;
+        width: 45vw;
+        grid-column: 2/3;
+        justify-self: end;
+    }
+
+    .home_img{
+        width: 45vw;
+        height: 50vh;
+        position: absolute;
+        left: 5vw;
+        top: 40vh;
+    }
+    
+    #home_copy {
+        grid-column: 1/3;
+        justify-self: center;
+        font-size: 1rem;
+        font-weight: 400;
+        width: 60vw;
+        margin-top: 35vh;
+        border-top: 2px solid #000;
+        padding-top: 40px;
+        z-index: 200;
+    }
+    
+    .menu a{
+        top: 5rem;
+        right: 10vw;
+        font-size: 1rem;
+        opacity: 100%;
+    }
+    
+    .dark_background .logo{
+        font-size: 2rem;
+        margin: 5rem 0 0 5vw;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #fff;
+        width: 100%;
+        height: 25%;
+    }
+
+    .menu_home{
+        grid-template-columns: 100%;
+    }
+
+    .dark_menu a{
+        top: 8rem;
+        right: 5rem;
+        font-size: 1.5rem;
+    }
+    
+    .options{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+        margin: 5vh 0 0 5vw;
+    }
+    
+    .about_titulo{
+        font-weight: 200;
+        font-size: 3rem;
+        line-height: 4rem;
+        margin-top: 8vh;
+        margin-left: 5vw;
+    }
+    
+    .about_img{
+        width: 80%;
+        height: calc(100vh - 12vh);
+        top: 12vh;
+        right: 0;
+    }
+    
+    #about_bio{
+        top: 105vh;
+        left: 5vw;
+        width: 90%;
+    }
+    
+    p{
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    
+    .redes h2{
+        font-size: 80px;
+        font-weight: 100;
+        margin-left: 5rem;
+        margin-top: 10rem;
+    }
+    
+    .redes div{
+        margin-left: 5rem;
+        margin-top: 30%;
+    }
+    
+    .redes a{
+        font-size: 80px;
+        font-weight: 200;
+    }
+    
+    .verne {
+        grid-template-columns: 100%;
+    }
+
+    .home.verne header{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 30vh;
+    }
+
+    .verne .menu a{
+        color:#000;
+    }
+
+    #verne_titulo{
+        font-size: 2rem;
+    }
+    
+    .verne_img{
+        height: 30vh;
+        width: 100%;
+        margin: 5vh 0 5vh 0;
+    }
+    
+    .verne_sect article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 0.5rem;
+    }
+
+    .verne_sect p{
+        font-size: 0.6rem;
+        line-height: normal;
+        font-weight: 200;
+        width: fit-content;
+        text-align: center;
+        margin-bottom: 1vh;
+    }
+
+    .verne_sect a {
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    #verne_address {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #verne_address p {
+        line-height:normal;
+        font-weight: 200;
+        font-size: 0.5rem;
+    }
+
+    footer span{
+        display: none;
+    }
+
+    .cocteles_titulo{
+        font-weight: 400;
+        font-size: 12rem;
+        letter-spacing: 3rem;
+        line-height: 9rem;
+        margin-left: 2rem;
+        margin-top: 15rem;
+        height: calc(100vh - 15rem);
+    }
+
+    .content_centered div i{
+        font-size: 2rem;
+    }
+
+    .content_centered section{
+        margin-top: 200px;
+    }
+    
+    .content_centered section article{
+        margin-bottom: 150px;
+    }
+    
+    .content_centered h2{
+        font-weight: 200;
+        margin-bottom: 5px;
+    }
+
+    .content_centered h3{
+        margin-bottom: 5px;
+    }
+
+    .img_gallery{
+        width: 60vh;
+        height: 60vh;
+        margin: 0 2% 0 2%;
+    }
+
+    #img_gallery_count {
+        left: 20vw;
+        margin-top: 5rem;
+    }
+
+    #cocteles_copy {
+        font-size: 5rem;
+        font-weight: 400;
+        width: 30vw;
+        left: 25vw;
+        margin-top: 5rem;
+    }
+
+    #ingredients {
+        font-size: 2rem;
+        right: 20vw;
+        margin-top: 16rem;
+        padding-bottom: 2rem;
+    }
+
+    footer {
+        height: 5vh;
+        width: 100%;
+        bottom: 0;
+        padding-top: 3vh;
+    }
+
+    i {
+        margin: 0 0.5% 0 1%;
+    }
+
+    /* #verne_address iframe{
+        position: absolute;
+        left: 0;
+        bottom: 8vh;
+    } */
+
+    #libro_img {
+        height: 60vh;
+        width: 560px;
+    }
+
+    #curso_img {
+        height: 60vh;
+        width: 560px;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .home{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .home header{
+        grid-column: 1/2;
+    }
+    
+    .logo{
+        font-size: 7rem;
+        margin: 3rem 0 0 3rem;
+        padding: 1rem;
+        border-bottom: 3px solid #000;
+        width: max-content;
+    }
+    
+    .header_img {
+        height: 100vh;
+        width: 45vw;
+        grid-column: 2/3;
+        justify-self: end;
+    }
+
+    .home_img{
+        width: 45vw;
+        height: 100vh;
+        position: absolute;
+        left: 5vw;
+        top: 80vh;
+    }
+    
+    #home_copy {
+        grid-column: 1/3;
+        justify-self: center;
+        font-size: 2rem;
+        font-weight: 400;
+        width: 40vw;
+        margin-top: 85vh;
+        border-top: 3px solid #000;
+        padding-top: 40px;
+    }
+    
+    .menu a{
+        top: 8rem;
+        right: 10vw;
+        font-size: 1.5rem;
+        opacity: 100%;
+    }
+
+    .dark_background .logo{
+        border-bottom: 3px solid #fff;
+        width: calc(100vw - 5rem);
+    }
+
+    .dark_menu a{
+        top: 8rem;
+        right: 5rem;
+        font-size: 1.5rem;
+    }
+    
+    .options{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        margin: 5vh 0 0 5vw;
+    }
+
+    .about_titulo{
+        font-weight: 200;
+        font-size: 5rem;
+        line-height: 6rem;
+        margin-top: 15vh;
+        margin-left: 5vw;
+    }
+    
+    .about_img{
+        width: 65%;
+        height: 130vh;
+        top: 12vh;
+        right: 0;
+    }
+    
+    #about_bio{
+        top: 150vh;
+        left: 5vw;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 1vw;
+    }
+    
+    p{
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    
+    /* .about_titulo{
+        font-weight: 200;
+        font-size: 3rem;
+        line-height: 4rem;
+        margin-top: 8vh;
+        margin-left: 5vw;
+    }
+    
+    .about_img{
+        width: 80%;
+        height: calc(100vh - 12vh);
+        top: 12vh;
+        right: 0;
+    }
+    
+    #about_bio{
+        top: 105vh;
+        left: 5vw;
+        width: 90%;
+    }
+    
+    p{
+        font-size: 0.8rem;
+        line-height: 1rem;
+    } */
+    
+    .redes h2{
+        font-size: 80px;
+        font-weight: 100;
+        margin-left: 5rem;
+        margin-top: 10rem;
+    }
+    
+    .redes div{
+        margin-left: 5rem;
+        margin-top: 30%;
+    }
+    
+    .redes a{
+        font-size: 80px;
+        font-weight: 200;
+    }
+    
+    #verne_titulo{
+        font-size: 5rem;
+        margin: 3rem 0 0 3rem;
+    }
+    
+    .verne_img{
+        height: 78vh;
+        width: 50%;
+        right: 0;
+        bottom: 8vh;
+    }
+    
+    .verne_sect p{
+        margin-left: 4rem;
+        line-height: normal;
+        font-weight: 200;
+    }
+    
+    #verne_links {
+        margin-top: 1rem;
+        margin-left: 4rem;
+    }
+
+    .verne_sect a {
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    #verne_address {
+        width: 600px;
+    }
+
+    #verne_address p {
+        line-height:normal;
+        font-weight: 200;
+        margin: 1.3rem 0 0 0;
+        font-size: 0.8rem;
+    }
+
+    .cocteles_titulo{
+        font-weight: 400;
+        font-size: 12rem;
+        letter-spacing: 3rem;
+        line-height: 9rem;
+        margin-left: 2rem;
+        margin-top: 15rem;
+        height: calc(100vh - 15rem);
+    }
+
+    .content_centered div i{
+        font-size: 2rem;
+    }
+
+    .content_centered section{
+        margin-top: 200px;
+    }
+    
+    .content_centered section article{
+        margin-bottom: 150px;
+    }
+    
+    .content_centered h2{
+        font-weight: 200;
+        margin-bottom: 5px;
+    }
+
+    .content_centered h3{
+        margin-bottom: 5px;
+    }
+
+    .img_gallery{
+        width: 60vh;
+        height: 60vh;
+        margin: 0 2% 0 2%;
+    }
+
+    #img_gallery_count {
+        left: 20vw;
+        margin-top: 5rem;
+    }
+
+    #cocteles_copy {
+        font-size: 5rem;
+        font-weight: 400;
+        width: 30vw;
+        left: 25vw;
+        margin-top: 5rem;
+    }
+
+    #ingredients {
+        font-size: 2rem;
+        right: 20vw;
+        margin-top: 16rem;
+        padding-bottom: 2rem;
+    }
+
+    footer {
+        height: 5vh;
+        width: 100%;
+        bottom: 0;
+        padding-top: 3vh;
+    }
+
+    i {
+        margin: 0 0.5% 0 1%;
+    }
+
+    #verne_address iframe{
+        position: absolute;
+        left: 0;
+        bottom: 8vh;
+    }
+
+    #libro_img {
+        height: 60vh;
+        width: 560px;
+    }
+
+    #curso_img {
+        height: 60vh;
+        width: 560px;
+    }
+    
+
+}
+
+@media only screen and (min-width:1024px){
+    .home{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .home header{
+        grid-column: 1/2;
+    }
+    
+    .logo{
+        font-size: 7rem;
+        margin: 3rem 0 0 3rem;
+        padding: 1rem;
+        border-bottom: 3px solid #000;
+        width: max-content;
+    }
+    
+    .header_img {
+        height: 100vh;
+        width: 45vw;
+        grid-column: 2/3;
+        justify-self: end;
+    }
+
+    .home_img{
+        width: 45vw;
+        height: 100vh;
+        position: absolute;
+        left: 5vw;
+        top: 80vh;
+    }
+    
+    #home_copy {
+        grid-column: 1/3;
+        justify-self: center;
+        font-size: 3rem;
+        font-weight: 400;
+        width: 40vw;
+        margin-top: 85vh;
+        border-top: 3px solid #000;
+        padding-top: 40px;
+    }
+    
+    .menu a{
+        top: 8rem;
+        right: 10vw;
+        font-size: 1.5rem;
+    }
+
+    .dark_background .logo{
+        border-bottom: 3px solid #fff;
+        width: calc(100vw - 5rem);
+    }
+
+    .dark_menu a{
+        top: 8rem;
+        right: 5rem;
+        font-size: 1.5rem;
+    }
+    
+    .options{
+        position: absolute;
+        top: 6rem;
+        left: 40vw;
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+    }
+
+    .about_titulo{
+        font-weight: 200;
+        font-size: 8rem;
+        line-height: 9rem;
+        margin-top: 15rem;
+        margin-left: 10rem;
+    }
+    
+    .about_img{
+        width: 65%;
+        height: 125vh;
+        top: 18rem;
+        right: 0;
+    }
+    
+    #about_bio{
+        top: 180vh;
+        left: 10rem;
+        width: 60%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 1vw;
+    }
+    
+    p{
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    
+    .redes h2{
+        font-size: 80px;
+        font-weight: 100;
+        margin-left: 5rem;
+        margin-top: 10rem;
+    }
+    
+    .redes div{
+        margin-left: 5rem;
+        margin-top: 30%;
+    }
+    
+    .redes a{
+        font-size: 80px;
+        font-weight: 200;
+    }
+    
+    #verne_titulo{
+        font-size: 5rem;
+        margin: 5vh 0 0 3rem;
+    }
+    
+    .home.verne header{
+        grid-column: 1/3;
+    }
+
+    .home.verne main{
+        grid-column: 1/3;
+    }
+
+    .home.verne footer{
+        grid-column: 1/3;
+    }
+
+    .verne_sect{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+        
+    .verne_sect article{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    .verne_sect div{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .verne_img{
+        height: 90vh;
+    }
+
+    .verne_sect p{
+        margin-left: 4rem;
+        line-height: normal;
+        font-weight: 200;
+    }
+    
+    #verne_links {
+        margin-top: 3rem;
+        margin-left: 4rem;
+    }
+
+
+    .verne_sect a {
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    #verne_address {
+        width: 100%;
+    }
+
+    #verne_address p {
+        line-height:normal;
+        font-weight: 200;
+        margin: 1.3rem 0 0 0;
+        font-size: 0.8rem;
+    }
+
+    .cocteles_titulo{
+        font-weight: 400;
+        font-size: 12rem;
+        letter-spacing: 3rem;
+        line-height: 9rem;
+        margin-left: 2rem;
+        margin-top: 15rem;
+        height: calc(100vh - 15rem);
+    }
+
+    .content_centered div i{
+        font-size: 2rem;
+    }
+
+    .content_centered section{
+        margin-top: 200px;
+    }
+    
+    .content_centered section article{
+        margin-bottom: 150px;
+    }
+    
+    .content_centered h2{
+        font-weight: 200;
+        margin-bottom: 5px;
+    }
+
+    .content_centered h3{
+        margin-bottom: 5px;
+    }
+
+    .img_gallery{
+        width: 60vh;
+        height: 60vh;
+        margin: 0 2% 0 2%;
+    }
+
+    #img_gallery_count {
+        left: 20vw;
+        margin-top: 5rem;
+    }
+
+    #cocteles_copy {
+        font-size: 5rem;
+        font-weight: 400;
+        width: 30vw;
+        left: 25vw;
+        margin-top: 5rem;
+    }
+
+    #ingredients {
+        font-size: 2rem;
+        right: 20vw;
+        margin-top: 16rem;
+        padding-bottom: 2rem;
+    }
+
+    footer {
+        height: 5vh;
+        width: 100%;
+        bottom: 0;
+        padding-top: 3vh;
+    }
+
+    i {
+        margin: 0 0.5% 0 1%;
+    }
+
+    #verne_address iframe{
+        position: absolute;
+        left: 0;
+        bottom: 8vh;
+    }
+
+    #libro_img {
+        height: 60vh;
+        width: 560px;
+    }
+
+    #curso_img {
+        height: 60vh;
+        width: 560px;
+    }
+    
+}
