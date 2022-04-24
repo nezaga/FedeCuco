@@ -326,10 +326,10 @@ i{
 }
 
 @media only screen and (max-width:767px){
-    .home{
+    /* .home{
         display: grid;
         grid-template-columns: 50% 50%;
-    }
+    } */
 
     .home header{
         grid-column: 1/2;
