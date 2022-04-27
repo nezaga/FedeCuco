@@ -21,6 +21,10 @@ header{
     color: #fff;
 }
 
+.home{
+    padding-right: 0;
+}
+
 .menu_home{
     display: grid;
 }
@@ -32,6 +36,8 @@ a{
 .logo {
     animation: fadeInRight;
     animation-duration: 2s;
+    line-height: 1;
+    color: #000
 }
 
 .logo span {
@@ -74,6 +80,7 @@ a{
 
 #home_copy {
     text-transform: uppercase;
+    margin-bottom: 0;
 }
 
 .menu a{
@@ -82,10 +89,12 @@ a{
     color: #fff;
     opacity: 50%;
     z-index: 100;
+    font-weight: bold;
 }
 
 .menu a:hover{
     opacity: 100%;
+    text-decoration: none;
 }
 
 .dark_menu a{
@@ -337,8 +346,8 @@ i{
     
     .logo{
         font-size: 2rem;
-        margin: 5rem 0 0 5vw;
-        padding-bottom: 0.5rem;
+        margin: 5rem 0 0 0;
+        padding: 0 0 0.5rem 0px;
         border-bottom: 2px solid #000;
         width: 95px;
         height: 25%;
@@ -346,16 +355,15 @@ i{
     
     .header_img {
         height: 50vh;
-        width: 45vw;
+        /* width: 45vw;
         grid-column: 2/3;
-        justify-self: end;
+        justify-self: end; */
     }
 
     .home_img{
         width: 45vw;
         height: 50vh;
         position: absolute;
-        left: 5vw;
         top: 40vh;
     }
     
@@ -367,7 +375,7 @@ i{
         width: 60vw;
         margin-top: 35vh;
         border-top: 2px solid #000;
-        padding-top: 40px;
+        padding-top: 30px;
         z-index: 200;
     }
     
@@ -597,10 +605,10 @@ i{
 }
 
 @media only screen and (min-width:768px) and (max-width:1023px){
-    .home{
+    /* .home{
         display: grid;
         grid-template-columns: 50% 50%;
-    }
+    } */
 
     .home header{
         grid-column: 1/2;
@@ -608,7 +616,7 @@ i{
     
     .logo{
         font-size: 7rem;
-        margin: 3rem 0 0 3rem;
+        margin: 3rem 0 0 0;
         padding: 1rem;
         border-bottom: 3px solid #000;
         width: max-content;
@@ -616,16 +624,15 @@ i{
     
     .header_img {
         height: 100vh;
-        width: 45vw;
+        /* width: 45vw;
         grid-column: 2/3;
-        justify-self: end;
+        justify-self: end; */
     }
 
     .home_img{
         width: 45vw;
         height: 100vh;
         position: absolute;
-        left: 5vw;
         top: 80vh;
     }
     
@@ -864,10 +871,10 @@ i{
 }
 
 @media only screen and (min-width:1024px){
-    .home{
+    /* .home{
         display: grid;
         grid-template-columns: 50% 50%;
-    }
+    } */
 
     .home header{
         grid-column: 1/2;
@@ -883,13 +890,13 @@ i{
     
     .header_img {
         height: 100vh;
-        width: 45vw;
+        /* width: 45vw;
         grid-column: 2/3;
-        justify-self: end;
+        justify-self: end; */
     }
 
     .home_img{
-        width: 45vw;
+        width: 40vw;
         height: 100vh;
         position: absolute;
         left: 5vw;
