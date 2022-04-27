@@ -13,6 +13,10 @@ header{
     height: fit-content;
 }
 
+ul{
+    list-style: none;
+}
+
 .dark_background{
     background-color: rgb(37, 37, 37)
 }
@@ -103,10 +107,12 @@ a{
     color: #000;
     opacity: 50%;
     z-index: 100;
+    font-weight: bold;
 }
 
 .dark_menu a:hover{
     opacity: 100%;
+    text-decoration: none;
 }
 
 .options{
@@ -255,7 +261,7 @@ iframe {
 
 .content_centered div i{
     display: inline-block;
-    margin: 0;
+    margin: 20px;
 }
 
 .content_centered div i:hover{
@@ -278,25 +284,25 @@ iframe {
     background-position: center;
 }
 
-#img_gallery_count {
+/* #img_gallery_count {
     display: block;
     text-align: left;
     position: absolute;
-}
+} */
 
 #cocteles_copy {
-    display: block;
+    /* display: block; */
     text-transform: uppercase;
-    text-align: left;
-    position: absolute;
+    /* text-align: left;
+    position: absolute; */
 }
 
-#ingredients {
+/* #ingredients {
     display: block;
     list-style: none;
     text-align: left;
     position: absolute;
-}
+} */
 
 footer {
     background-color: rgb(37, 37, 37);
@@ -400,9 +406,10 @@ i{
     }
 
     .dark_menu a{
-        top: 8rem;
-        right: 5rem;
-        font-size: 1.5rem;
+        top: 5rem;
+        right: 10vw;
+        font-size: 1rem;
+        opacity: 100%;
     }
     
     .options{
@@ -520,16 +527,14 @@ i{
 
     .cocteles_titulo{
         font-weight: 400;
-        font-size: 12rem;
-        letter-spacing: 3rem;
+        font-size: 4rem;
+        /* letter-spacing: 0.1rem; */
         line-height: 9rem;
-        margin-left: 2rem;
-        margin-top: 15rem;
-        height: calc(100vh - 15rem);
+        margin-top: 4rem;
     }
 
     .content_centered div i{
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .content_centered section{
@@ -550,29 +555,23 @@ i{
     }
 
     .img_gallery{
-        width: 60vh;
-        height: 60vh;
-        margin: 0 2% 0 2%;
+        width: 25vh;
+        height: 25vh;
+        /* margin: 0 2% 0 2%; */
     }
 
     #img_gallery_count {
-        left: 20vw;
-        margin-top: 5rem;
+        font-size: 0.8rem;
+        margin-top: 15px;
     }
 
     #cocteles_copy {
-        font-size: 5rem;
         font-weight: 400;
         width: 30vw;
-        left: 25vw;
-        margin-top: 5rem;
     }
 
     #ingredients {
-        font-size: 2rem;
-        right: 20vw;
-        margin-top: 16rem;
-        padding-bottom: 2rem;
+        font-size: 0.8rem;
     }
 
     footer {
