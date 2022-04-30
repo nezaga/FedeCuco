@@ -13,6 +13,22 @@ header{
     height: fit-content;
 }
 
+.grid-left{
+    grid-column: 1/2;
+}
+
+.grid-right{
+    grid-column: 2/3;
+}
+
+.grid-first-row{
+    grid-row: 1;
+}
+
+.align-end{
+    align-self: end;
+}
+
 .dark_background{
     background-color: rgb(37, 37, 37)
 }
@@ -478,6 +494,7 @@ i{
         justify-content: center;
         align-items: center;
         line-height: 0.5rem;
+        margin-top: 10px;
     }
 
     .verne_sect p{
@@ -628,7 +645,7 @@ i{
         left: 5vw;
         top: 80vh;
     }
-    
+
     #home_copy {
         grid-column: 1/3;
         justify-self: center;
@@ -737,27 +754,44 @@ i{
         font-weight: 200;
     }
     
+    .verne header{
+        height: 17vh;
+    }
+
+    .verne main{
+        grid-column: 1/3;
+    }
+
     #verne_titulo{
-        font-size: 5rem;
+        font-size: 2rem;
         margin: 3rem 0 0 3rem;
     }
     
     .verne_img{
-        height: 78vh;
-        width: 50%;
+        height: 75vh;
         right: 0;
         bottom: 8vh;
     }
     
-    .verne_sect p{
-        margin-left: 4rem;
-        line-height: normal;
-        font-weight: 200;
+    .verne_sect {
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
     
+    .verne_sect p{
+        margin-left: 3rem;
+        line-height: 1.2;
+        font-weight: 200;
+        font-size: 10px;
+    }
+    
+    .verne_sect article{
+        grid-column: 1/2;
+    }
+
     #verne_links {
-        margin-top: 1rem;
-        margin-left: 4rem;
+        margin-top: 2rem;
+        margin-left: 3rem;
     }
 
     .verne_sect a {
@@ -766,14 +800,14 @@ i{
     }
 
     #verne_address {
-        width: 600px;
+        width: 90%;
     }
 
     #verne_address p {
         line-height:normal;
         font-weight: 200;
         margin: 1.3rem 0 0 0;
-        font-size: 0.8rem;
+        font-size: 10px;
     }
 
     .cocteles_titulo{
@@ -835,9 +869,11 @@ i{
 
     footer {
         height: 5vh;
-        width: 100%;
-        bottom: 0;
+        /* width: 100%;
+        bottom: 0; */
         padding-top: 3vh;
+        grid-column: 1/3;
+        font-size: 14px;
     }
 
     i {
@@ -845,9 +881,7 @@ i{
     }
 
     #verne_address iframe{
-        position: absolute;
-        left: 0;
-        bottom: 8vh;
+        height: 50vh;
     }
 
     #libro_img {
@@ -979,7 +1013,67 @@ i{
         font-weight: 200;
     }
     
+    .verne header{
+        height: 17vh;
+    }
+
+    .verne main{
+        grid-column: 1/3;
+    }
+
     #verne_titulo{
+        font-size: 3rem;
+        margin: 3rem 0 0 3rem;
+    }
+    
+    .verne_img{
+        height: 75vh;
+        right: 0;
+        bottom: 8vh;
+    }
+    
+    .verne_sect {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+    .verne_sect p{
+        margin-left: 3rem;
+        line-height: 1.2;
+        font-weight: 200;
+        font-size: 12px;
+    }
+    
+    .verne_sect article{
+        grid-column: 1/2;
+    }
+
+    #verne_links {
+        margin-top: 2rem;
+        margin-left: 3rem;
+    }
+
+    .verne_sect a {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    #verne_address {
+        width: 90%;
+    }
+
+    #verne_address p {
+        line-height:normal;
+        font-weight: 200;
+        margin: 1.3rem 0 0 0;
+        font-size: 12px;
+    }
+
+    #verne_address iframe{
+        height: 50vh;
+    }
+
+    /* #verne_titulo{
         font-size: 5rem;
         margin: 5vh 0 0 3rem;
     }
@@ -1042,7 +1136,7 @@ i{
         font-weight: 200;
         margin: 1.3rem 0 0 0;
         font-size: 0.8rem;
-    }
+    } */
 
     .cocteles_titulo{
         font-weight: 400;
@@ -1103,19 +1197,15 @@ i{
 
     footer {
         height: 5vh;
-        width: 100%;
-        bottom: 0;
+        /* width: 100%;
+        bottom: 0; */
         padding-top: 3vh;
+        grid-column: 1/3;
+        font-size: 14px;
     }
 
     i {
         margin: 0 0.5% 0 1%;
-    }
-
-    #verne_address iframe{
-        position: absolute;
-        left: 0;
-        bottom: 8vh;
     }
 
     #libro_img {
