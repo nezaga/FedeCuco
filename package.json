@@ -1,0 +1,33 @@
+{
+  "name": "fedecuco",
+  "version": "1.0.0",
+  "description": "Página en honor al cantinero argentino Fede Cuco",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nezaga/FedeCuco.git"
+  },
+  "keywords": [
+    "bartender",
+    "cantinero",
+    "fede",
+    "cuco",
+    "coctelería"
+  ],
+  "author": "Nicolás Zaga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nezaga/FedeCuco/issues"
+  },
+  "homepage": "https://github.com/nezaga/FedeCuco#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
+}
