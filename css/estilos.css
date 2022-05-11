@@ -11,7 +11,7 @@
 
 body {
   font-family: "Anybody", cursive;
-  /* background-color: lightgray; */ }
+  /* background-color: map-get($colors, light); */ }
 
 header {
   height: fit-content; }
@@ -44,6 +44,8 @@ a {
   animation: fadeInRight;
   animation-duration: 2s; }
   .logo span {
+    font-size: auto;
+    font-style: auto;
     font-weight: 900;
     text-transform: uppercase; }
 
@@ -98,7 +100,7 @@ a {
   text-align: left; }
 
 .options a {
-  color: #727272;
+  color: gray;
   font-weight: 400; }
   .options a:hover {
     color: #fff; }
@@ -127,7 +129,7 @@ section {
   position: absolute; }
 
 p {
-  color: lightgray; }
+  color: gray; }
 
 .redes {
   height: 100vh;
@@ -207,22 +209,16 @@ iframe {
   background-size: cover;
   background-position: center; }
 
-#img_gallery_count {
+.absolut_block, #img_gallery_count, #cocteles_copy, #ingredients {
   display: block;
   text-align: left;
   position: absolute; }
 
 #cocteles_copy {
-  display: block;
-  text-transform: uppercase;
-  text-align: left;
-  position: absolute; }
+  text-transform: uppercase; }
 
 #ingredients {
-  display: block;
-  list-style: none;
-  text-align: left;
-  position: absolute; }
+  list-style: none; }
 
 footer {
   background-color: #252525;
@@ -278,6 +274,7 @@ i {
     grid-column: 1/3;
     justify-self: center;
     font-size: 1rem;
+    font-style: auto;
     font-weight: 400;
     width: 60vw;
     margin-top: 35vh;
@@ -308,8 +305,9 @@ i {
     font-size: 1.2rem;
     margin: 5vh 0 0 5vw; }
   .about_titulo {
-    font-weight: 200;
     font-size: 3rem;
+    font-style: auto;
+    font-weight: 200;
     line-height: 4rem;
     margin-top: 8vh;
     margin-left: 5vw; }
