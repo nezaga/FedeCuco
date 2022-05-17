@@ -10,23 +10,10 @@
 
 body {
     font-family: $mainfont;
-    /* background-color: map-get($colors, light); */
 }
 
 header {
     height: fit-content;
-}
-
-.grid-left {
-    grid-column: 1/2;
-}
-
-.grid-right {
-    grid-column: 2/3;
-}
-
-.grid-first-row {
-    grid-row: 1;
 }
 
 .align-end {
@@ -34,11 +21,10 @@ header {
 }
 
 .dark_background {
-    background-color: map-get($colors, dark)
-}
-
-.dark_background .logo {
-    color: map-get($colors, primary);
+    background-color: map-get($colors, dark);
+    .logo {
+        color: map-get($colors, primary);
+    }
 }
 
 .menu_home {
@@ -55,11 +41,9 @@ a {
 
     span {
         @include font_styles(auto,auto,900);
-        // font-weight: 900;
         text-transform: uppercase;
     }
 }
-
 
 .header_img {
     background-image: url(../assets/img/cocktail.jpg);
@@ -99,15 +83,18 @@ a {
     text-transform: uppercase;
 }
 
-.menu a {
+.menu {
+    a {
     text-transform: uppercase;
     position: fixed;
     color: map-get($colors, primary);
     opacity: 50%;
     z-index: 100;
+    @include font_styles (auto,auto,bold);
         &:hover{
             opacity: 100%;
         }
+    }
 }
 
 .dark_menu {
@@ -128,17 +115,14 @@ a {
     opacity: 100%;
     list-style: none;
     text-align: left;
-
-}
-
-.options a {
-    color: map-get($colors, light);
-    font-weight: 400;
-    &:hover{
-        color: map-get($colors, primary);
+    a {
+        color: map-get($colors, light);
+        font-weight: 400;
+        &:hover{
+            color: map-get($colors, primary);
+        }
     }
-}
-
+    }
 
 section {
     height: 100vh;
@@ -201,7 +185,6 @@ p {
 
 .verne_img {
     background-image: url(../assets/img/verne_club.jpg);
-    /* position: absolute; */
     background-size: cover;
     background-position: center;
 }
@@ -231,7 +214,7 @@ p {
 
 iframe {
     max-width: 100%;
-    height: auto;
+    height: 60vh;
     position: relative;
 }
 
@@ -313,7 +296,7 @@ i {
 
 #libro_img {
     display: inline-block;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-image: url(../assets/img/bartender-de-entrecasa.jpg);
 }
@@ -321,7 +304,6 @@ i {
 #curso_img {
     display: inline-block;
     background-size: cover;
-    background-position: center;
     background-image: url(../assets/img/cocteleria_en_casa.jpg);
 }
 
@@ -329,19 +311,20 @@ i {
     .home {
         display: grid;
         grid-template-columns: 50% 50%;
-    }
-
-    .home header {
-        grid-column: 1/2;
+        header {
+            grid-column: 1/2;
+        }
     }
 
     .logo {
-        font-size: 2rem;
         margin: 5rem 0 0 5vw;
         padding-bottom: 0.5rem;
         border-bottom: 2px solid map-get($colors, secondary);
         width: 95px;
         height: 25%;
+        h1 {
+            @include font_styles (2rem,auto,400);
+        }
     }
 
     .header_img {
@@ -363,8 +346,6 @@ i {
         grid-column: 1/3;
         justify-self: center;
         @include font_styles (1rem,auto,400);
-        // font-size: 1rem;
-        // font-weight: 400;
         width: 60vw;
         margin-top: 35vh;
         border-top: 2px solid map-get($colors, secondary);
@@ -372,30 +353,36 @@ i {
         z-index: 200;
     }
 
-    .menu a {
-        top: 5rem;
-        right: 10vw;
-        font-size: 1rem;
-        opacity: 100%;
+    .menu {
+        a {
+            top: 5rem;
+            right: 10vw;
+            font-size: 1rem;
+            opacity: 100%;
+        }
     }
 
-    .dark_background .logo {
-        font-size: 2rem;
-        margin: 5rem 0 0 5vw;
-        padding-bottom: 0.5rem;
-        border-bottom: 2px solid map-get($colors, primary);
-        width: 100%;
-        height: 25%;
+    .dark_background {
+        .logo {
+            font-size: 2rem;
+            margin: 5rem 0 0 5vw;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid map-get($colors, primary);
+            width: calc(100vw - 5vw);
+            height: 25%;
+        }
     }
 
     .menu_home {
         grid-template-columns: 100%;
     }
 
-    .dark_menu a {
-        top: 8rem;
-        right: 5rem;
-        font-size: 1.5rem;
+    .dark_menu {
+        a {
+            top: 8rem;
+            right: 5rem;
+            font-size: 1.5rem;
+        }
     }
 
     .options {
@@ -407,11 +394,12 @@ i {
 
     .about_titulo {
         @include font_styles(3rem,auto,200);
-        // font-weight: 200;
-        // font-size: 3rem;
         line-height: 4rem;
         margin-top: 8vh;
         margin-left: 5vw;
+        h1 {
+            @include font_styles (1.5em,auto,bold);
+        }
     }
 
     .about_img {
@@ -422,9 +410,12 @@ i {
     }
 
     #about_bio {
-        top: 105vh;
+        top: 100vh;
         left: 5vw;
         width: 90%;
+        div{
+            margin-top: 5vh;
+        }
     }
 
     p {
@@ -432,36 +423,34 @@ i {
         line-height: 1rem;
     }
 
-    .redes h2 {
-        font-size: 80px;
-        font-weight: 100;
-        margin-left: 5rem;
-        margin-top: 10rem;
-    }
-
-    .redes div {
-        margin-left: 5rem;
-        margin-top: 30%;
-    }
-
-    .redes a {
-        font-size: 80px;
-        font-weight: 200;
+    .redes {
+        h2 {
+        @include font_styles (40px,auto,100);
+        margin-left: 3rem;
+        margin-top: 8rem;
+        }
+        div {
+            margin-left: 3rem;
+            margin-top: 45vh;
+        }
+        a {
+            @include font_styles(30px,auto,200);
+        }
     }
 
     .verne {
         grid-template-columns: 100%;
-    }
-
-    .home.verne header {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        height: 30vh;
-    }
-
-    .verne .menu a {
-        color: map-get($colors, secondary);
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 30vh;
+        }
+        .menu{
+            a {
+            color: map-get($colors, secondary);
+            }
+        }
     }
 
     #verne_titulo {
@@ -474,99 +463,114 @@ i {
         margin: 5vh 0 5vh 0;
     }
 
-    .verne_sect article {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        line-height: 0.5rem;
-        margin-top: 10px;
-    }
-
-    .verne_sect p {
-        font-size: 0.6rem;
-        line-height: normal;
-        font-weight: 200;
-        width: fit-content;
-        text-align: center;
-        margin-bottom: 1vh;
-    }
-
-    .verne_sect a {
-        font-weight: 600;
-        font-size: 0.8rem;
+    .verne_sect {
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 0.5rem;
+            margin-top: 10px;
+        }
+        p {
+            font-size: 0.6rem;
+            line-height: normal;
+            font-weight: 200;
+            width: fit-content;
+            text-align: center;
+            margin-bottom: 1vh;
+        }
+        a {
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
     }
 
     #verne_address {
         width: 100%;
         display: flex;
         flex-direction: column;
-    }
-
-    #verne_address p {
-        line-height: normal;
-        font-weight: 200;
-        font-size: 0.5rem;
+        p {
+            line-height: normal;
+            font-weight: 200;
+            font-size: 0.5rem;
+        }
     }
 
     footer span {
         display: none;
     }
 
+    .cocteles {
+        grid-template-columns: 100%;
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30vh;
+            width: 100%;
+        }
+        .menu{
+            a {
+            color: map-get($colors, secondary);
+            }
+        }
+        main {
+            margin-top: 7vh;
+        }
+    }
+
     .cocteles_titulo {
-        font-weight: 400;
-        font-size: 12rem;
-        letter-spacing: 3rem;
+        @include font_styles(3rem,auto,400);
+        letter-spacing: 0.5rem;
         line-height: 9rem;
-        margin-left: 2rem;
-        margin-top: 15rem;
-        height: calc(100vh - 15rem);
+        margin-top: 8rem;
     }
 
-    .content_centered div i {
-        font-size: 2rem;
-    }
-
-    .content_centered section {
-        margin-top: 200px;
-    }
-
-    .content_centered section article {
-        margin-bottom: 150px;
-    }
-
-    .content_centered h2 {
-        font-weight: 200;
-        margin-bottom: 5px;
-    }
-
-    .content_centered h3 {
-        margin-bottom: 5px;
+    .content_centered {
+        div { 
+            i {
+                font-size: 2rem;
+            }
+        }
+        section {
+            margin-top: 200px;
+            article {
+                margin-bottom: 150px;
+            }
+        }
+        h2 {
+            font-weight: 200;
+            margin-bottom: 5px;
+        }
+        h3 {
+            margin-bottom: 5px;
+        }
     }
 
     .img_gallery {
-        width: 60vh;
-        height: 60vh;
+        width: 40vh;
+        height: 40vh;
         margin: 0 2% 0 2%;
     }
 
     #img_gallery_count {
         left: 20vw;
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
 
     #cocteles_copy {
-        font-size: 5rem;
+        font-size: 2rem;
         font-weight: 400;
         width: 30vw;
-        left: 25vw;
-        margin-top: 5rem;
+        left: 20vw;
+        margin-top: 4rem;
     }
 
     #ingredients {
-        font-size: 2rem;
-        right: 20vw;
-        margin-top: 16rem;
+        font-size: 1rem;
+        left: 20vw;
+        margin-top: 10rem;
         padding-bottom: 2rem;
     }
 
@@ -581,20 +585,31 @@ i {
         margin: 0 0.5% 0 1%;
     }
 
-    /* #verne_address iframe{
-         position: absolute;
-         left: 0;
-         bottom: 8vh;
-     } */
+    .librosycursos {
+        grid-template-columns: 100%;
+        .menu{
+            a {
+            color: map-get($colors, secondary);
+            }
+        }
+        .content_centered{
+            section{
+                margin-top: 120px;
+                article{
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
 
     #libro_img {
         height: 60vh;
-        width: 560px;
+        width: 100%;
     }
 
     #curso_img {
         height: 60vh;
-        width: 560px;
+        width: 100%;
     }
 
 }
@@ -610,11 +625,14 @@ i {
     }
 
     .logo {
-        font-size: 7rem;
+        font-size: 6rem;
         margin: 3rem 0 0 3rem;
         padding: 1rem;
         border-bottom: 3px solid map-get($colors, secondary);
         width: max-content;
+        h1 {
+            @include font_styles (6rem,auto,400);
+        }
     }
 
     .header_img {
@@ -643,22 +661,28 @@ i {
         padding-top: 40px;
     }
 
-    .menu a {
+    .menu {
+        a {
         top: 8rem;
         right: 10vw;
         font-size: 1.5rem;
         opacity: 100%;
+        }
     }
 
-    .dark_background .logo {
+    .dark_background {
+        .logo {
         border-bottom: 3px solid map-get($colors, primary);
         width: calc(100vw - 5rem);
+        }
     }
 
-    .dark_menu a {
+    .dark_menu {
+        a {
         top: 8rem;
         right: 5rem;
         font-size: 1.5rem;
+        }
     }
 
     .options {
@@ -669,11 +693,13 @@ i {
     }
 
     .about_titulo {
-        font-weight: 200;
-        font-size: 5rem;
+        @include font_styles(5rem,auto,200);
         line-height: 6rem;
         margin-top: 15vh;
         margin-left: 5vw;
+        h1 {
+            @include font_styles (1.5em,auto,bold);
+        }
     }
 
     .about_img {
@@ -689,7 +715,10 @@ i {
         width: 80%;
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-column-gap: 1vw;
+        grid-column-gap: 6vw;
+        .grid_column2{
+            margin-top: 35vh;
+        }
     }
 
     p {
@@ -697,55 +726,28 @@ i {
         line-height: 2rem;
     }
 
-    /* .about_titulo{
-         font-weight: 200;
-         font-size: 3rem;
-         line-height: 4rem;
-         margin-top: 8vh;
-         margin-left: 5vw;
-     }
-     
-     .about_img{
-         width: 80%;
-         height: calc(100vh - 12vh);
-         top: 12vh;
-         right: 0;
-     }
-     
-     #about_bio{
-         top: 105vh;
-         left: 5vw;
-         width: 90%;
-     }
-     
-     p{
-         font-size: 0.8rem;
-         line-height: 1rem;
-     } */
-
-    .redes h2 {
-        font-size: 80px;
-        font-weight: 100;
-        margin-left: 5rem;
+    .redes {
+        h2 {
+        @include font_styles (60px,auto,100);
+        margin-left: 4rem;
         margin-top: 10rem;
+        }
+        div {
+            margin-left: 4rem;
+            margin-top: 60vh;
+        }
+        a {
+            @include font_styles(50px,auto,200);
+        }
     }
 
-    .redes div {
-        margin-left: 5rem;
-        margin-top: 30%;
-    }
-
-    .redes a {
-        font-size: 80px;
-        font-weight: 200;
-    }
-
-    .verne header {
-        height: 17vh;
-    }
-
-    .verne main {
-        grid-column: 1/3;
+    .verne {
+        header {
+            height: 17vh;
+        }
+        main {
+            grid-column: 1/3;
+        }    
     }
 
     #verne_titulo {
@@ -762,17 +764,19 @@ i {
     .verne_sect {
         display: grid;
         grid-template-columns: 50% 50%;
-    }
-
-    .verne_sect p {
-        margin-left: 3rem;
-        line-height: 1.2;
-        font-weight: 200;
-        font-size: 10px;
-    }
-
-    .verne_sect article {
-        grid-column: 1/2;
+        p {
+            margin-left: 3rem;
+            line-height: 1.2;
+            font-weight: 200;
+            font-size: 10px;
+        }
+        article {
+            grid-column: 1/2;
+        }
+        a {
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
     }
 
     #verne_links {
@@ -780,51 +784,62 @@ i {
         margin-left: 3rem;
     }
 
-    .verne_sect a {
-        font-weight: 600;
-        font-size: 0.8rem;
-    }
-
     #verne_address {
         width: 90%;
+        p {
+            line-height: normal;
+            font-weight: 200;
+            margin: 1.3rem 0 0 0;
+            font-size: 10px;
+        }
     }
 
-    #verne_address p {
-        line-height: normal;
-        font-weight: 200;
-        margin: 1.3rem 0 0 0;
-        font-size: 10px;
+    .cocteles {
+        grid-template-columns: 100%;
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .menu{
+            a {
+            color: map-get($colors, secondary);
+            }
+        }
+        main {
+            margin-top: 7vh;
+        }
     }
 
     .cocteles_titulo {
-        font-weight: 400;
-        font-size: 12rem;
+        @include font_styles(5rem,auto,400);
         letter-spacing: 3rem;
         line-height: 9rem;
         margin-left: 2rem;
-        margin-top: 15rem;
-        height: calc(100vh - 15rem);
+        overflow: hidden;
     }
 
-    .content_centered div i {
-        font-size: 2rem;
-    }
-
-    .content_centered section {
-        margin-top: 200px;
-    }
-
-    .content_centered section article {
-        margin-bottom: 150px;
-    }
-
-    .content_centered h2 {
-        font-weight: 200;
-        margin-bottom: 5px;
-    }
-
-    .content_centered h3 {
-        margin-bottom: 5px;
+    .content_centered {
+        div { 
+            i {
+                font-size: 2rem;
+            }
+        }
+        section {
+            margin-top: 200px;
+            article {
+                margin-bottom: 150px;
+            }
+        }
+        h2 {
+            font-weight: 200;
+            margin-bottom: 5px;
+        }
+        h3 {
+            margin-bottom: 5px;
+        }
     }
 
     .img_gallery {
@@ -835,28 +850,26 @@ i {
 
     #img_gallery_count {
         left: 20vw;
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
 
     #cocteles_copy {
-        font-size: 5rem;
+        font-size: 2rem;
         font-weight: 400;
         width: 30vw;
-        left: 25vw;
-        margin-top: 5rem;
+        left: 20vw;
+        margin-top: 4rem;
     }
 
     #ingredients {
-        font-size: 2rem;
-        right: 20vw;
-        margin-top: 16rem;
+        font-size: 1rem;
+        left: 20vw;
+        margin-top: 10rem;
         padding-bottom: 2rem;
     }
 
     footer {
         height: 5vh;
-        /* width: 100%;
-         bottom: 0; */
         padding-top: 3vh;
         grid-column: 1/3;
         font-size: 14px;
@@ -866,6 +879,23 @@ i {
         margin: 0 0.5% 0 1%;
     }
 
+    .librosycursos {
+        grid-template-columns: 100%;
+        .menu{
+            a {
+            color: map-get($colors, secondary);
+            }
+        }
+        .content_centered{
+            section{
+                margin-top: 120px;
+                article{
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
     #verne_address iframe {
         height: 50vh;
     }
@@ -873,13 +903,15 @@ i {
     #libro_img {
         height: 60vh;
         width: 560px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: whitesmoke;
     }
 
     #curso_img {
         height: 60vh;
         width: 560px;
     }
-
 
 }
 
@@ -899,6 +931,9 @@ i {
         padding: 1rem;
         border-bottom: 3px solid map-get($colors, secondary);
         width: max-content;
+        h1 {
+            @include font_styles (7rem,auto,400);
+        }
     }
 
     .header_img {
@@ -927,21 +962,27 @@ i {
         padding-top: 40px;
     }
 
-    .menu a {
+    .menu {
+        a {
         top: 8rem;
         right: 10vw;
         font-size: 1.5rem;
+        }
     }
 
-    .dark_background .logo {
+    .dark_background {
+        .logo {
         border-bottom: 3px solid map-get($colors, primary);
         width: calc(100vw - 5rem);
+        }
     }
 
-    .dark_menu a {
+    .dark_menu {
+        a {
         top: 8rem;
         right: 5rem;
         font-size: 1.5rem;
+        }
     }
 
     .options {
@@ -954,27 +995,32 @@ i {
     }
 
     .about_titulo {
-        font-weight: 200;
-        font-size: 8rem;
-        line-height: 9rem;
-        margin-top: 15rem;
+        @include font_styles(6rem,auto,200);
+        line-height: 8rem;
+        margin-top: 11rem;
         margin-left: 10rem;
+        h1 {
+            @include font_styles (1.5em,auto,bold);
+        }
     }
 
     .about_img {
         width: 65%;
         height: 125vh;
-        top: 18rem;
+        top: 16rem;
         right: 0;
     }
 
     #about_bio {
         top: 180vh;
-        left: 10rem;
-        width: 60%;
+        left: 20vw;
+        width: 50%;
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-column-gap: 1vw;
+        grid-column-gap: 5vw;
+        .grid_column2{
+            margin-top: 35vh;
+        }
     }
 
     p {
@@ -982,29 +1028,28 @@ i {
         line-height: 2rem;
     }
 
-    .redes h2 {
-        font-size: 80px;
-        font-weight: 100;
-        margin-left: 5rem;
-        margin-top: 10rem;
+    .redes {
+        h2 {
+        @include font_styles (90px,auto,100);
+        margin-left: 10rem;
+        margin-top: 12rem;
+        }
+        div {
+            margin-left: 10rem;
+            margin-top: 70vh;
+        }
+        a {
+            @include font_styles(70px,auto,200);
+        }
     }
 
-    .redes div {
-        margin-left: 5rem;
-        margin-top: 30%;
-    }
-
-    .redes a {
-        font-size: 80px;
-        font-weight: 200;
-    }
-
-    .verne header {
-        height: 17vh;
-    }
-
-    .verne main {
-        grid-column: 1/3;
+    .verne {
+        header {
+            height: 17vh;
+        }
+        main {
+            grid-column: 1/3;
+        }    
     }
 
     #verne_titulo {
@@ -1021,17 +1066,19 @@ i {
     .verne_sect {
         display: grid;
         grid-template-columns: 50% 50%;
-    }
-
-    .verne_sect p {
-        margin-left: 3rem;
-        line-height: 1.2;
-        font-weight: 200;
-        font-size: 12px;
-    }
-
-    .verne_sect article {
-        grid-column: 1/2;
+        p {
+            margin-left: 3rem;
+            line-height: 1.2;
+            font-weight: 200;
+            font-size: 12px;
+        }
+        article {
+            grid-column: 1/2;
+        }
+        a {
+            font-weight: 600;
+            font-size: 1rem;
+        }
     }
 
     #verne_links {
@@ -1039,120 +1086,66 @@ i {
         margin-left: 3rem;
     }
 
-    .verne_sect a {
-        font-weight: 600;
-        font-size: 1rem;
-    }
-
     #verne_address {
         width: 90%;
+        p {
+            line-height: normal;
+            font-weight: 200;
+            margin: 1.3rem 0 0 0;
+            font-size: 12px;
+        }
+        iframe {
+            height: 50vh;
+        }    
     }
 
-    #verne_address p {
-        line-height: normal;
-        font-weight: 200;
-        margin: 1.3rem 0 0 0;
-        font-size: 12px;
+    .cocteles {
+        grid-template-columns: 100%;
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .menu{
+            a {
+            color: map-get($colors, secondary);
+            }
+        }
+        main {
+            margin-top: 7vh;
+        }
     }
 
-    #verne_address iframe {
-        height: 50vh;
-    }
-
-    /* #verne_titulo{
-         font-size: 5rem;
-         margin: 5vh 0 0 3rem;
-     }
-     
-     .home.verne header{
-         grid-column: 1/3;
-     }
- 
-     .home.verne main{
-         grid-column: 1/3;
-     }
- 
-     .home.verne footer{
-         grid-column: 1/3;
-     }
- 
-     .verne_sect{
-         display: grid;
-         grid-template-columns: 50% 50%;
-     }
- 
-         
-     .verne_sect article{
-         grid-column: 1/2;
-         grid-row: 1/2;
-     }
-     
-     .verne_sect div{
-         grid-column: 2/3;
-         grid-row: 1/2;
-     }
- 
-     .verne_img{
-         height: 90vh;
-     }
- 
-     .verne_sect p{
-         margin-left: 4rem;
-         line-height: normal;
-         font-weight: 200;
-     }
-     
-     #verne_links {
-         margin-top: 3rem;
-         margin-left: 4rem;
-     }
- 
- 
-     .verne_sect a {
-         font-weight: 600;
-         font-size: 0.8rem;
-     }
- 
-     #verne_address {
-         width: 100%;
-     }
- 
-     #verne_address p {
-         line-height:normal;
-         font-weight: 200;
-         margin: 1.3rem 0 0 0;
-         font-size: 0.8rem;
-     } */
 
     .cocteles_titulo {
-        font-weight: 400;
-        font-size: 12rem;
-        letter-spacing: 3rem;
+        @include font_styles(6rem,auto,400);
+        letter-spacing: 4rem;
         line-height: 9rem;
         margin-left: 2rem;
-        margin-top: 15rem;
-        height: calc(100vh - 15rem);
+        overflow: hidden;
     }
 
-    .content_centered div i {
-        font-size: 2rem;
-    }
-
-    .content_centered section {
-        margin-top: 200px;
-    }
-
-    .content_centered section article {
-        margin-bottom: 150px;
-    }
-
-    .content_centered h2 {
-        font-weight: 200;
-        margin-bottom: 5px;
-    }
-
-    .content_centered h3 {
-        margin-bottom: 5px;
+    .content_centered {
+        div { 
+            i {
+                font-size: 2rem;
+            }
+        }
+        section {
+            margin-top: 200px;
+            article {
+                margin-bottom: 150px;
+            }
+        }
+        h2 {
+            font-weight: 200;
+            margin-bottom: 5px;
+        }
+        h3 {
+            margin-bottom: 5px;
+        }
     }
 
     .img_gallery {
@@ -1163,28 +1156,26 @@ i {
 
     #img_gallery_count {
         left: 20vw;
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
 
     #cocteles_copy {
-        font-size: 5rem;
+        font-size: 4rem;
         font-weight: 400;
         width: 30vw;
         left: 25vw;
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
 
     #ingredients {
         font-size: 2rem;
-        right: 20vw;
-        margin-top: 16rem;
+        left: 50vw;
+        margin-top: 10rem;
         padding-bottom: 2rem;
     }
 
     footer {
         height: 5vh;
-        /* width: 100%;
-         bottom: 0; */
         padding-top: 3vh;
         grid-column: 1/3;
         font-size: 14px;
@@ -1194,9 +1185,28 @@ i {
         margin: 0 0.5% 0 1%;
     }
 
+    .librosycursos {
+        grid-template-columns: 100%;
+        .menu{
+            a {
+            color: map-get($colors, secondary);
+            }
+        }
+        .content_centered{
+            section{
+                article{
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
     #libro_img {
         height: 60vh;
         width: 560px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: whitesmoke;
     }
 
     #curso_img {
