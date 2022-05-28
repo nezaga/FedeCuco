@@ -1,0 +1,49 @@
+@media only screen and (max-width:767px) {
+    .carousel-inner {
+        height: 90vh;
+        .carousel-item{
+            img{
+                width: 70%;
+                margin: auto;
+            }
+        }
+    }
+    .carousel-control-prev, .carousel-control-next{
+        top: 25vw;
+        bottom: auto;
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .carousel-inner {
+        height: 120vh;
+        .carousel-item{
+            img{
+                width: 50%;
+                margin: auto;
+            }
+        }
+    }
+    .carousel-control-prev, .carousel-control-next{
+        top: 25vw;
+        bottom: auto;
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .carousel-inner {
+        height: 180vh;
+        .carousel-item{
+            img{
+                width: 50%;
+                margin: auto;
+            }
+        }
+    }
+    .carousel-control-prev, .carousel-control-next{
+        top: 25vw;
+        bottom: auto;
+    }
+}

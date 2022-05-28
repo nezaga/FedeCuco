@@ -12,6 +12,38 @@
 .grid-first-row {
   grid-row: 1; }
 
+@media only screen and (max-width: 767px) {
+  .carousel-inner {
+    height: 90vh; }
+    .carousel-inner .carousel-item img {
+      width: 70%;
+      margin: auto; }
+  .carousel-control-prev, .carousel-control-next {
+    top: 25vw;
+    bottom: auto;
+    opacity: 1; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .carousel-inner {
+    height: 120vh; }
+    .carousel-inner .carousel-item img {
+      width: 50%;
+      margin: auto; }
+  .carousel-control-prev, .carousel-control-next {
+    top: 25vw;
+    bottom: auto;
+    opacity: 1; } }
+
+@media only screen and (min-width: 1024px) {
+  .carousel-inner {
+    height: 180vh; }
+    .carousel-inner .carousel-item img {
+      width: 50%;
+      margin: auto; }
+  .carousel-control-prev, .carousel-control-next {
+    top: 25vw;
+    bottom: auto; } }
+
 body {
   font-family: "Anybody", cursive; }
 
@@ -78,7 +110,8 @@ a {
   font-style: auto;
   font-weight: bold; }
   .menu a:hover {
-    opacity: 100%; }
+    opacity: 100%;
+    text-decoration: none; }
 
 .dark_menu a {
   text-transform: uppercase;
@@ -390,7 +423,7 @@ i {
     .cocteles .menu a {
       color: #000; }
     .cocteles main {
-      margin-top: 7vh; }
+      margin-top: 8vh; }
   .cocteles_titulo {
     font-size: 3rem;
     font-style: auto;
@@ -399,7 +432,8 @@ i {
     line-height: 9rem;
     margin-top: 8rem; }
   .content_centered div i {
-    font-size: 2rem; }
+    font-size: 1.5rem;
+    color: #000; }
   .content_centered section {
     margin-top: 200px; }
     .content_centered section article {
@@ -414,19 +448,19 @@ i {
     height: 40vh;
     margin: 0 2% 0 2%; }
   #img_gallery_count {
-    left: 20vw;
-    margin-top: 2rem; }
+    margin-top: 4rem;
+    color: #000; }
   #cocteles_copy {
     font-size: 2rem;
     font-weight: 400;
-    width: 30vw;
-    left: 20vw;
-    margin-top: 4rem; }
+    width: 65vw;
+    margin-top: 6rem;
+    color: #000; }
   #ingredients {
     font-size: 1rem;
-    left: 20vw;
     margin-top: 10rem;
-    padding-bottom: 2rem; }
+    padding-bottom: 2rem;
+    color: #000; }
   footer {
     height: 5vh;
     width: 100%;
@@ -598,7 +632,8 @@ i {
     margin-left: 2rem;
     overflow: hidden; }
   .content_centered div i {
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: #000; }
   .content_centered section {
     margin-top: 200px; }
     .content_centered section article {
@@ -613,19 +648,21 @@ i {
     height: 60vh;
     margin: 0 2% 0 2%; }
   #img_gallery_count {
-    left: 20vw;
-    margin-top: 2rem; }
+    margin-top: 4rem;
+    color: #000; }
   #cocteles_copy {
     font-size: 2rem;
     font-weight: 400;
     width: 30vw;
-    left: 20vw;
-    margin-top: 4rem; }
+    left: 5vw;
+    margin-top: 4rem;
+    color: #000; }
   #ingredients {
     font-size: 1rem;
-    left: 20vw;
+    left: 25vw;
     margin-top: 10rem;
-    padding-bottom: 2rem; }
+    padding-bottom: 2rem;
+    color: #000; }
   footer {
     height: 5vh;
     padding-top: 3vh;
@@ -805,7 +842,7 @@ i {
     margin-left: 2rem;
     overflow: hidden; }
   .content_centered div i {
-    font-size: 2rem; }
+    font-size: 3rem; }
   .content_centered section {
     margin-top: 200px; }
     .content_centered section article {
@@ -820,19 +857,25 @@ i {
     height: 60vh;
     margin: 0 2% 0 2%; }
   #img_gallery_count {
-    left: 20vw;
-    margin-top: 2rem; }
+    margin-top: 5rem;
+    color: #000;
+    font-size: 2rem; }
   #cocteles_copy {
     font-size: 4rem;
+    font-style: auto;
     font-weight: 400;
     width: 30vw;
-    left: 25vw;
-    margin-top: 2rem; }
+    left: 10vw;
+    margin-top: 5rem;
+    color: #000; }
   #ingredients {
     font-size: 2rem;
-    left: 50vw;
-    margin-top: 10rem;
-    padding-bottom: 2rem; }
+    font-style: auto;
+    font-weight: 400;
+    left: 30vw;
+    margin-top: 15rem;
+    padding-bottom: 2rem;
+    color: #000; }
   footer {
     height: 5vh;
     padding-top: 3vh;

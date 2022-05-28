@@ -7,6 +7,7 @@
 @import "colors";
 @import "grids";
 @import "typography";
+@import "carousel";
 
 body {
     font-family: $mainfont;
@@ -93,6 +94,7 @@ a {
     @include font_styles (auto,auto,bold);
         &:hover{
             opacity: 100%;
+            text-decoration: none;
         }
     }
 }
@@ -516,7 +518,7 @@ i {
             }
         }
         main {
-            margin-top: 7vh;
+            margin-top: 8vh;
         }
     }
 
@@ -530,7 +532,8 @@ i {
     .content_centered {
         div { 
             i {
-                font-size: 2rem;
+                font-size: 1.5rem;
+                color: map-get($colors, secondary);
             }
         }
         section {
@@ -555,23 +558,23 @@ i {
     }
 
     #img_gallery_count {
-        left: 20vw;
-        margin-top: 2rem;
+        margin-top: 4rem;
+        color: map-get($colors, secondary);
     }
 
     #cocteles_copy {
         font-size: 2rem;
         font-weight: 400;
-        width: 30vw;
-        left: 20vw;
-        margin-top: 4rem;
+        width: 65vw;
+        margin-top: 6rem;
+        color: map-get($colors, secondary);
     }
 
     #ingredients {
         font-size: 1rem;
-        left: 20vw;
         margin-top: 10rem;
         padding-bottom: 2rem;
+        color: map-get($colors, secondary);
     }
 
     footer {
@@ -825,6 +828,7 @@ i {
         div { 
             i {
                 font-size: 2rem;
+                color: map-get($colors, secondary);
             }
         }
         section {
@@ -849,23 +853,25 @@ i {
     }
 
     #img_gallery_count {
-        left: 20vw;
-        margin-top: 2rem;
+        margin-top: 4rem;
+        color: map-get($colors, secondary);
     }
 
     #cocteles_copy {
         font-size: 2rem;
         font-weight: 400;
         width: 30vw;
-        left: 20vw;
+        left: 5vw;
         margin-top: 4rem;
+        color: map-get($colors, secondary);
     }
 
     #ingredients {
         font-size: 1rem;
-        left: 20vw;
+        left: 25vw;
         margin-top: 10rem;
         padding-bottom: 2rem;
+        color: map-get($colors, secondary);
     }
 
     footer {
@@ -1130,7 +1136,7 @@ i {
     .content_centered {
         div { 
             i {
-                font-size: 2rem;
+                font-size: 3rem;
             }
         }
         section {
@@ -1155,23 +1161,25 @@ i {
     }
 
     #img_gallery_count {
-        left: 20vw;
-        margin-top: 2rem;
+        margin-top: 5rem;
+        color: map-get($colors, secondary);
+        font-size: 2rem;
     }
 
     #cocteles_copy {
-        font-size: 4rem;
-        font-weight: 400;
+        @include font_styles(4rem,auto,400);
         width: 30vw;
-        left: 25vw;
-        margin-top: 2rem;
+        left: 10vw;
+        margin-top: 5rem;
+        color: map-get($colors, secondary);
     }
 
     #ingredients {
-        font-size: 2rem;
-        left: 50vw;
-        margin-top: 10rem;
+        @include font_styles(2rem,auto,400);
+        left: 30vw;
+        margin-top: 15rem;
         padding-bottom: 2rem;
+        color: map-get($colors, secondary);
     }
 
     footer {
